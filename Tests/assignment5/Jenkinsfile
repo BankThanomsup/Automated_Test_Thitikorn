@@ -4,20 +4,25 @@ pipeline {
     stages {
         stage('Checkout Code From Git') {
             steps {
-                git url: 'https://github.com/yourusername/automated_test_thitikorn.git', branch: 'main'
+                    git url: 'https://github.com/BankThanomsup/Automated_Test_Thitikorn.git', branch: 'main', credentialsId: 'github-test-token'
             }
         }
 
         stage('Install Robot Framework') {
             steps {
-                sh 'pip install robotframework'
-                sh 'pip install robotframework-seleniumlibrary'
+                bat '''
+                pip install robotframework
+                pip install --quiet robotframework robotframework-seleniumlibrary
+                '''
             }
         }
 
         stage('Run login_test.robot') {
             steps {
-                sh 'robot Tests/assignment2/login_test.robot'
+                    bat '''
+                    cd Tests\\assignment2
+                    robot login_test.robot
+                    '''
             }
         }
 
