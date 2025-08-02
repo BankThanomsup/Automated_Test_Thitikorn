@@ -4,20 +4,26 @@ pipeline {
     stages {
         stage('Checkout Code From Git') {
             steps {
-                git url: 'https://github.com/BankThanomsup/Automated_Test_Thitikorn', branch: 'main'
+                git url: 'https://github.com/yourusername/automated_test_thitikorn.git', branch: 'main'
             }
         }
 
-        stage('Run Test Automate') {
+        stage('Install Robot Framework') {
             steps {
-                sh 'npm install'      
-                sh 'npx playwright test'  
+                sh 'pip install robotframework'
+                sh 'pip install robotframework-seleniumlibrary'
             }
         }
 
-        stage('Send Result To Jenkins') {
+        stage('Run login_test.robot') {
             steps {
-                junit 'results/*.xml' 
+                sh 'robot Tests/assignment2/login_test.robot'
+            }
+        }
+
+        stage('Publish Results') {
+            steps {
+                robot outputDirectory: '.' 
             }
         }
     }
