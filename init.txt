@@ -1,0 +1,7 @@
+*** Settings ***
+Library           SeleniumLibrary   
+Library           RequestsLibrary
+Library           Collections
+
+Resource    Resources/Locators/Locator_Login.robot
+Resource    Resources/Locators/Locator_api_test.robot

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-08-02T19:22:34.746112" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\User\Downloads\Automated_Test_Thitikorn\Tests\assignment2\login_test.robot">
+<test id="s1-t1" name="Login Success" line="6">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:22:35.183520" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-02T19:22:35.183193" elapsed="5.686585"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-02T19:22:40.870491" elapsed="0.039484"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:22:40.911697" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T19:22:40.911037" elapsed="0.114840"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:22:41.027658" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${VALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T19:22:41.027183" elapsed="0.099434"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:22:41.127437" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<arg>//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T19:22:41.127094" elapsed="1.170844"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>You logged into a secure area!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-02T19:22:42.298725" elapsed="0.036979"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:22:42.336421" level="INFO">Clicking link 'Logout'.</msg>
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T19:22:42.336130" elapsed="0.917476"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>You logged out of the secure area!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-02T19:22:43.254188" elapsed="0.014153"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-02T19:22:43.268729" elapsed="2.196028"/>
+</kw>
+<doc>Verify successful login with valid username and password, then logout</doc>
+<status status="PASS" start="2025-08-02T19:22:35.181826" elapsed="10.283797"/>
+</test>
+<test id="s1-t2" name="Login Failed - Password Incorrect" line="18">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:22:45.467167" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-02T19:22:45.466903" elapsed="5.677705"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-02T19:22:51.145156" elapsed="0.046797"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:22:51.192803" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T19:22:51.192427" elapsed="0.118958"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:22:51.312101" level="INFO">Typing text 'Password!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${INVALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T19:22:51.311771" elapsed="0.115064"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:22:51.427479" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<arg>//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T19:22:51.427227" elapsed="0.083907"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your password is invalid!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-02T19:22:51.511510" elapsed="0.907395"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-02T19:22:52.419305" elapsed="2.215413"/>
+</kw>
+<doc>Verify login fails when correct username and wrong password is entered</doc>
+<status status="PASS" start="2025-08-02T19:22:45.466312" elapsed="9.168872"/>
+</test>
+<test id="s1-t3" name="Login Failed - Username Not Found" line="28">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:22:54.636770" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-02T19:22:54.636490" elapsed="5.659708"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-02T19:23:00.296752" elapsed="0.032011"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:23:00.329574" level="INFO">Typing text 'tomholland' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${INVALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T19:23:00.329214" elapsed="0.120307"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:23:00.450395" level="INFO">Typing text 'Password!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${INVALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T19:23:00.449990" elapsed="0.087287"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-02T19:23:00.538095" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<arg>//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-02T19:23:00.537739" elapsed="0.088792"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your username is invalid!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-02T19:23:00.627020" elapsed="0.968661"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-02T19:23:01.596088" elapsed="2.170895"/>
+</kw>
+<doc>Verify login fails when non-existent username is entered</doc>
+<status status="PASS" start="2025-08-02T19:22:54.635657" elapsed="9.131796"/>
+</test>
+<status status="PASS" start="2025-08-02T19:22:34.748149" elapsed="29.020085"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="3" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
