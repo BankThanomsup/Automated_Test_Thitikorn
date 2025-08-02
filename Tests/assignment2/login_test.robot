@@ -1,5 +1,5 @@
 *** Settings ***
-Resource                ..//init.txt
+Resource                ..//..//init.txt
 
 
 *** Test Cases ***
