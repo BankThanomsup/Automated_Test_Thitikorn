@@ -3,10 +3,10 @@ pipeline {
 
     environment {
         REPO_URL = 'https://github.com/BankThanomsup/Automated_Test_Thitikorn.git'
-        RESULTS_DIR = 'results'
         WEB_TESTS = 'Tests/assignment2/login_test.robot'
         API_TESTS = 'Tests/assignment3/api_test.robot'
-        REQUIREMENTS_FILE = 'requirements.txt'
+        WEB_RESULTS = 'Tests/assignment5/Results/assignment2'
+        API_RESULTS = 'Tests/assignment5/Results/assignment3'
     }
 
     stages {
@@ -28,36 +28,34 @@ pipeline {
             }
         }
 
-stage('Run Tests in Parallel') {
-    parallel {
-        stage('Run Web Tests') {
-            steps {
-                echo "Running Web Tests"
-                bat """
-                cd Tests\\assignment2
-                robot --outputdir . login_test.robot
-                """
+        stage('Run Tests in Parallel') {
+            parallel {
+                stage('Run Web Tests') {
+                    steps {
+                        echo "Running Web Tests"
+                        bat """
+                        robot --outputdir ${WEB_RESULTS} ${WEB_TESTS}
+                        """
+                    }
+                }
+                stage('Run API Tests') {
+                    steps {
+                        echo "Running API Tests"
+                        bat """
+                        robot --outputdir ${API_RESULTS} ${API_TESTS}
+                        """
+                    }
+                }
             }
         }
-        stage('Run API Tests') {
-            steps {
-                echo "Running API Tests"
-                bat """
-                cd Tests\\assignment3
-                robot --outputdir . api_test.robot
-                """
-            }
-        }
-    }
-}
 
-stage('Publish Results') {
-    steps {
-        echo "Publishing results"
-        robot outputDirectory: "Tests\\assignment5\\Results\\assigment2"
-        robot outputDirectory: "Tests\\assignment5\\Results\\assigment3"
-    }
-}
+        stage('Publish Results') {
+            steps {
+                echo "Publishing results"
+                robot outputDirectory: "${WEB_RESULTS}"
+                robot outputDirectory: "${API_RESULTS}"
+            }
+        }
     }
 
     post {
