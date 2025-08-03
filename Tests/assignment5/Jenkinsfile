@@ -1,45 +1,74 @@
 pipeline {
     agent any
 
+    environment {
+        REPO_URL = 'https://github.com/BankThanomsup/Automated_Test_Thitikorn.git'
+        RESULTS_DIR = 'results'
+        WEB_TESTS = 'Tests/assignment2/login_test.robot'
+        API_TESTS = 'Tests/assignment3/api_test.robot'
+        REQUIREMENTS_FILE = 'requirements.txt'
+    }
+
     stages {
         stage('Checkout Code From Git') {
             steps {
-                git url: 'https://github.com/BankThanomsup/Automated_Test_Thitikorn.git', branch: 'main', credentialsId: 'github-test-token'
+                echo "Checking out code from ${REPO_URL}"
+                git url: "${REPO_URL}", branch: 'main', credentialsId: 'github-test-token'
             }
         }
 
-        stage('Install Robot Framework') {
+        stage('Install Dependencies') {
             steps {
-                bat '''
+                echo "Installing dependencies"
+                bat """
                 pip install --quiet robotframework
                 pip install --quiet robotframework-seleniumlibrary
                 pip install --quiet robotframework-requests
-                '''
+                """
             }
         }
 
-        stage('Run login_test.robot') {
+stage('Run Tests in Parallel') {
+    parallel {
+        stage('Run Web Tests') {
             steps {
-                bat '''
+                echo "Running Web Tests"
+                bat """
                 cd Tests\\assignment2
-                robot login_test.robot
-                '''
+                robot --outputdir . login_test.robot
+                """
             }
         }
-
-        stage('Run api_test.robot') {
+        stage('Run API Tests') {
             steps {
-                bat '''
+                echo "Running API Tests"
+                bat """
                 cd Tests\\assignment3
-                robot api_test.robot
-                '''
+                robot --outputdir . api_test.robot
+                """
             }
         }
+    }
+}
 
-        stage('Publish Results') {
-            steps {
-                robot outputDirectory: '.' 
-            }
+stage('Publish Results') {
+    steps {
+        echo "Publishing results"
+        robot outputDirectory: "Tests\\assignment5\\Results\\assigment2"
+        robot outputDirectory: "Tests\\assignment5\\Results\\assigment3"
+    }
+}
+    }
+
+    post {
+        always {
+            echo "Pipeline completed"
+        }
+        success {
+            echo "Pipeline completed successfully"
+        }
+        failure {
+            echo "Pipeline failed"
         }
     }
 }
