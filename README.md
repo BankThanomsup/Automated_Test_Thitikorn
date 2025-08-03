@@ -13,4 +13,5 @@
    ```bash
    pip install -r requirements.txt
 4. Run tests
+```bash
    robot Tests/assignment2/login_test.robot
