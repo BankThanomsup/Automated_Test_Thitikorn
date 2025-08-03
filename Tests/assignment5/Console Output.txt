@@ -23,14 +23,14 @@ Fetching upstream changes from https://github.com/BankThanomsup/Automated_Test_T
 using GIT_ASKPASS to set credentials github-test-token
  > git.exe fetch --tags --force --progress -- https://github.com/BankThanomsup/Automated_Test_Thitikorn.git +refs/heads/*:refs/remotes/origin/* # timeout=10
  > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
-Checking out Revision 1ccc793a63f15d8dfad981a2a3a3c5e57617fc97 (refs/remotes/origin/main)
+Checking out Revision 8e7e6220a316eda2ef2f02e04716e332740dd13b (refs/remotes/origin/main)
  > git.exe config core.sparsecheckout # timeout=10
- > git.exe checkout -f 1ccc793a63f15d8dfad981a2a3a3c5e57617fc97 # timeout=10
+ > git.exe checkout -f 8e7e6220a316eda2ef2f02e04716e332740dd13b # timeout=10
  > git.exe branch -a -v --no-abbrev # timeout=10
  > git.exe branch -D main # timeout=10
- > git.exe checkout -b main 1ccc793a63f15d8dfad981a2a3a3c5e57617fc97 # timeout=10
-Commit message: "[Update] Resource path"
- > git.exe rev-list --no-walk 086240fd69eb30a5e74e34b435f79b71736d24e3 # timeout=10
+ > git.exe checkout -b main 8e7e6220a316eda2ef2f02e04716e332740dd13b # timeout=10
+Commit message: "[Update] Jenkinsfile"
+ > git.exe rev-list --no-walk 97f428f47a3b38404c82f057f3ee851c6155386c # timeout=10
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] stage
@@ -46,10 +46,12 @@ C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test>pip install --
 
 C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test>pip install --quiet robotframework-seleniumlibrary 
 
+
 [notice] A new release of pip is available: 25.0.1 -> 25.2
 [notice] To update, run: python.exe -m pip install --upgrade pip
 
 C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test>pip install --quiet robotframework-requests 
+
 
 [notice] A new release of pip is available: 25.0.1 -> 25.2
 [notice] To update, run: python.exe -m pip install --upgrade pip
@@ -71,27 +73,12 @@ Running Web Tests
 Running API Tests
 [Pipeline] bat
 
-C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test>cd Tests\assignment2 
 
-C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment2>robot --outputdir . login_test.robot 
+C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test>robot --outputdir Tests/assignment5/Results/assignment2 Tests/assignment2/login_test.robot 
 
-C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test>cd Tests\assignment3 
+C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test>robot --outputdir Tests/assignment5/Results/assignment3 Tests/assignment3/api_test.robot 
 
-C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment3>robot --outputdir . api_test.robot 
 [ ERROR ] Error in file 'C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\init.txt' on line 5: Importing library 'AppiumLibrary' failed: ModuleNotFoundError: No module named 'AppiumLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Python313\Scripts\robot.exe
-  C:\Python313\python313.zip
-  C:\Python313\DLLs
-  C:\Python313\Lib
-  C:\Python313
-  C:\Python313\Lib\site-packages
-==============================================================================
-Login Test                                                                    
-==============================================================================
-Login Success :: Verify successful login with valid username and p... [ ERROR ] Error in file 'C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\init.txt' on line 5: Importing library 'AppiumLibrary' failed: ModuleNotFoundError: No module named 'AppiumLibrary'
 Traceback (most recent call last):
   None
 PYTHONPATH:
@@ -104,10 +91,24 @@ PYTHONPATH:
 ==============================================================================
 Api Test                                                                      
 ==============================================================================
-Get user profile success :: To verify get user profile API returns... C:\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+Get user profile success :: To verify get user profile API returns... [ ERROR ] Error in file 'C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\init.txt' on line 5: Importing library 'AppiumLibrary' failed: ModuleNotFoundError: No module named 'AppiumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Python313\Scripts\robot.exe
+  C:\Python313\python313.zip
+  C:\Python313\DLLs
+  C:\Python313\Lib
+  C:\Python313
+  C:\Python313\Lib\site-packages
+==============================================================================
+Login Test                                                                    
+==============================================================================
+Login Success :: Verify successful login with valid username and p... C:\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(
 | PASS |
 ------------------------------------------------------------------------------
+
 Get user profile but user not found :: Verify API returns 404 and ... C:\Python313\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(
 | PASS |
@@ -115,24 +116,27 @@ Get user profile but user not found :: Verify API returns 404 and ... C:\Python3
 Api Test                                                              | PASS |
 2 tests, 2 passed, 0 failed
 ==============================================================================
-Output:  C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment3\output.xml
-Log:     C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment3\log.html
-Report:  C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment3\report.html
+Output:  C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment5\Results\assignment3\output.xml
+Log:     C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment5\Results\assignment3\log.html
+Report:  C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment5\Results\assignment3\report.html
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] }
+
 | PASS |
 ------------------------------------------------------------------------------
+
 Login Failed - Password Incorrect :: Verify login fails when corre... | PASS |
 ------------------------------------------------------------------------------
+
 Login Failed - Username Not Found :: Verify login fails when non-e... | PASS |
 ------------------------------------------------------------------------------
 Login Test                                                            | PASS |
 3 tests, 3 passed, 0 failed
 ==============================================================================
-Output:  C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment2\output.xml
-Log:     C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment2\log.html
-Report:  C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment2\report.html
+Output:  C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment5\Results\assignment2\output.xml
+Log:     C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment5\Results\assignment2\log.html
+Report:  C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment5\Results\assignment2\report.html
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] }
@@ -158,7 +162,7 @@ Pipeline failed
 [Pipeline] }
 [Pipeline] // node
 [Pipeline] End of Pipeline
-Also:   org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: b66d01d8-aa28-43b7-883d-7ac39e7949f7
+Also:   org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: 71ac5070-5eea-4dd4-88ad-52b90cd300e1
 java.lang.NoSuchMethodError: No such DSL method 'robot' found among steps [archive, bat, build, catchError, checkout, deleteDir, dir, echo, emailext, emailextrecipients, envVarsForTool, error, fileExists, findBuildScans, getContext, git, input, isUnix, junit, library, libraryResource, load, mail, milestone, node, parallel, powershell, properties, publishChecks, pwd, pwsh, readFile, readTrusted, resolveScm, retry, script, sh, sleep, stage, stash, step, timeout, timestamps, tm, tool, unarchive, unstable, unstash, validateDeclarativePipeline, waitForBuild, waitUntil, warnError, withChecks, withContext, withCredentials, withEnv, withGradle, wrap, writeFile, ws] or symbols [GitUsernamePassword, agent, all, allBranchesSame, allOf, always, ant, antFromApache, antOutcome, antTarget, any, anyOf, apiToken, apiTokenProperty, architecture, archiveArtifacts, artifactManager, assembla, authorInChangelog, authorizationMatrix, batchFile, bitbucket, bitbucketServer, booleanParam, branch, brokenBuildSuspects, brokenTestsSuspects, browser, buildButton, buildDiscarder, buildDiscarders, buildRetention, buildSingleRevisionOnly, buildUser, buildingTag, builtInNode, caseInsensitive, caseSensitive, certificate, cgit, changeRequest, changelog, changelogBase, changelogToBranch, changeset, checkoutOption, checkoutToSubdirectory, choice, choiceParam, cleanAfterCheckout, cleanBeforeCheckout, cleanWs, clock, cloneOption, command, computerRetentionCheckInterval, consoleUrlProvider, contributor, cps, credentials, cron, crumb, culprits, dark, darkSystem, default, defaultDisplayUrlProvider, defaultFolderConfiguration, defaultView, demand, developers, disableConcurrentBuilds, disableRestartFromStage, disableResume, discoverOtherRefs, discoverOtherRefsTrait, diskSpace, diskSpaceMonitor, downstream, dumb, durabilityHint, email-ext, envVars, envVarsFilter, environment, equals, experimentalFlags, expression, extendedEmailPublisher, file, fileParam, filePath, fingerprint, fingerprints, firstBuildChangelog, fisheye, frameOptions, freeStyle, freeStyleJob, fromScm, fromSource, git, gitBranchDiscovery, gitHooks, gitHubBranchDiscovery, gitHubBranchHeadAuthority, gitHubExcludeArchivedRepositories, gitHubExcludeForkedRepositories, gitHubExcludePrivateRepositories, gitHubExcludePublicRepositories, gitHubForkDiscovery, gitHubIgnoreDraftPullRequestFilter, gitHubPullRequestDiscovery, gitHubSshCheckout, gitHubTagDiscovery, gitHubTopicsFilter, gitHubTrustContributors, gitHubTrustEveryone, gitHubTrustNobody, gitHubTrustPermissions, gitLab, gitList, gitSCM, gitTagDiscovery, gitTool, gitUsernamePassword, gitWeb, gitblit, github, githubProjectProperty, githubPush, gitiles, gogs, gradle, group, headRegexFilter, headWildcardFilter, hyperlink, hyperlinkToModels, ignoreOnPush, inbound, inheriting, inheritingGlobal, installSource, isRestartedRun, jdk, jgit, jgitapache, jnlp, jobBuildDiscarder, jobName, junitTestResultStorage, kiln, label, lastDuration, lastFailure, lastGrantedAuthorities, lastStable, lastSuccess, legacy, legacySCM, lfs, list, local, localBranch, localBranchTrait, location, logRotator, loggedInUsersCanDoAnything, mailer, masterBuild, maven, maven3Mojos, mavenErrors, mavenGlobalConfig, mavenMojos, mavenWarnings, modernSCM, multiBranchProjectDisplayNaming, multibranch, myView, namedBranchesDifferent, node, nodeProperties, nonInheriting, none, nonresumable, not, organizationFolder, overrideIndexTriggers, paneStatus, parallelsAlwaysFailFast, parameters, password, pattern, perBuildTag, permanent, phabricator, pipeline, pipelineGraphView, pipelineTriggers, plainText, plugin, pollSCM, preserveStashes, previous, projectNamingStrategy, proxy, pruneStaleBranch, pruneStaleTag, pruneTags, queueItemAuthenticator, quietPeriod, rateLimit, rateLimitBuilds, recipients, redmine, refSpecs, remoteName, requestor, resourceRoot, responseTime, retainOnlyVariables, rhodeCode, run, runParam, sSHLauncher, schedule, scmGit, scmRetryCount, scriptApproval, scriptApprovalLink, search, security, shell, simpleBuildDiscarder, skipDefaultCheckout, skipStagesAfterUnstable, slave, sourceRegexFilter, sourceWildcardFilter, sparseCheckout, sparseCheckoutPaths, ssh, sshUserPrivateKey, standard, status, string, stringParam, submodule, submoduleOption, suppressAutomaticTriggering, suppressFolderAutomaticTriggering, swapSpace, tag, teamFoundation, teamSlugFilter, text, textParam, themeManager, timestamper, timestamperConfig, timezone, tmpSpace, toolLocation, triggeredBy, unsecured, untrusted, upstream, upstreamDevelopers, user, userIdentity, userOrGroup, userSeed, usernameColonPassword, usernamePassword, viewgit, viewsTabBar, weather, withAnt, zip] or globals [currentBuild, env, params, pipeline, scm]
 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.DSL.invokeMethod(DSL.java:218)
 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsScript.invokeMethod(CpsScript.java:124)
@@ -179,7 +183,7 @@ java.lang.NoSuchMethodError: No such DSL method 'robot' found among steps [archi
 	at PluginClassLoader for script-security//org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:152)
 	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.sandbox.SandboxInvoker.methodCall(SandboxInvoker.java:17)
 	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.LoggingInvoker.methodCall(LoggingInvoker.java:118)
-	at WorkflowScript.run(WorkflowScript:57)
+	at WorkflowScript.run(WorkflowScript:55)
 	at org.jenkinsci.plugins.pipeline.modeldefinition.ModelInterpreter.delegateAndExecute(ModelInterpreter.groovy:139)
 	at org.jenkinsci.plugins.pipeline.modeldefinition.ModelInterpreter.executeSingleStage(ModelInterpreter.groovy:633)
 	at org.jenkinsci.plugins.pipeline.modeldefinition.ModelInterpreter.catchRequiredContextForNode(ModelInterpreter.groovy:390)
@@ -203,6 +207,20 @@ java.lang.NoSuchMethodError: No such DSL method 'robot' found among steps [archi
 	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationGroup.methodCall(ContinuationGroup.java:90)
 	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.dispatchOrArg(FunctionCallBlock.java:114)
 	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.fixArg(FunctionCallBlock.java:83)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.CollectionLiteralBlock$ContinuationImpl.dispatch(CollectionLiteralBlock.java:55)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.CollectionLiteralBlock$ContinuationImpl.item(CollectionLiteralBlock.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.dispatchOrArg(FunctionCallBlock.java:108)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.fixArg(FunctionCallBlock.java:83)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)
+	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.CastBlock$ContinuationImpl.cast(CastBlock.java:47)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at PluginClassLoader for workflow-cps//com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)

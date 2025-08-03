@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-08-03T23:13:20.737442" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\Tests\assignment2\login_test.robot">
+<test id="s1-t1" name="Login Success" line="6">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:21.530470" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-03T23:13:21.530151" elapsed="5.694242"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-03T23:13:27.224751" elapsed="0.029200"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:27.254688" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T23:13:27.254213" elapsed="0.095195"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:27.349930" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${VALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T23:13:27.349669" elapsed="0.066768"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:27.416974" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<arg>//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T23:13:27.416699" elapsed="0.083677"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>You logged into a secure area!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-03T23:13:27.500627" elapsed="0.885344"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:28.386469" level="INFO">Clicking link 'Logout'.</msg>
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T23:13:28.386230" elapsed="0.711917"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>You logged out of the secure area!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-03T23:13:29.098391" elapsed="0.012398"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-03T23:13:29.111045" elapsed="2.113481"/>
+</kw>
+<doc>Verify successful login with valid username and password, then logout</doc>
+<status status="PASS" start="2025-08-03T23:13:21.528770" elapsed="9.696033"/>
+</test>
+<test id="s1-t2" name="Login Failed - Password Incorrect" line="18">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:31.226188" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-03T23:13:31.225887" elapsed="5.627150"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-03T23:13:36.853234" elapsed="0.023982"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:36.877757" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T23:13:36.877470" elapsed="0.081231"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:36.959297" level="INFO">Typing text 'Password!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${INVALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T23:13:36.959001" elapsed="0.072472"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:37.031964" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<arg>//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T23:13:37.031710" elapsed="0.069926"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your password is invalid!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-03T23:13:37.101875" elapsed="0.880663"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-03T23:13:37.982729" elapsed="2.115445"/>
+</kw>
+<doc>Verify login fails when correct username and wrong password is entered</doc>
+<status status="PASS" start="2025-08-03T23:13:31.225294" elapsed="8.873139"/>
+</test>
+<test id="s1-t3" name="Login Failed - Username Not Found" line="28">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:40.099330" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-03T23:13:40.099135" elapsed="5.607312"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-03T23:13:45.706740" elapsed="0.022995"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:45.730443" level="INFO">Typing text 'tomholland' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${INVALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T23:13:45.730034" elapsed="0.079659"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:45.810249" level="INFO">Typing text 'Password!' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${INVALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T23:13:45.809953" elapsed="0.060973"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-03T23:13:45.871450" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<arg>//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-03T23:13:45.871188" elapsed="0.083734"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your username is invalid!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-03T23:13:45.955158" elapsed="0.890884"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-03T23:13:46.846290" elapsed="2.130022"/>
+</kw>
+<doc>Verify login fails when non-existent username is entered</doc>
+<status status="PASS" start="2025-08-03T23:13:40.098792" elapsed="8.877735"/>
+</test>
+<status status="PASS" start="2025-08-03T23:13:20.738898" elapsed="28.238140"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="3" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-08-03T23:13:21.495263" level="ERROR">Error in file 'C:\ProgramData\Jenkins\.jenkins\workspace\login_test and api_test\init.txt' on line 5: Importing library 'AppiumLibrary' failed: ModuleNotFoundError: No module named 'AppiumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Python313\Scripts\robot.exe
+  C:\Python313\python313.zip
+  C:\Python313\DLLs
+  C:\Python313\Lib
+  C:\Python313
+  C:\Python313\Lib\site-packages</msg>
+</errors>
+</robot>
