@@ -114,9 +114,9 @@ Select Todo Date
     AppiumLibrary.Click Element    //android.view.View[@content-desc="${date} August 2025"]
     Click Ok Button For Date
 
-Tap On Coordinates
-    [Arguments]       ${x}    ${y}
-    Tap With W3C Action        ${x}    ${y}
+# Tap On Coordinates
+#     [Arguments]       ${x}    ${y}
+#     Tap With W3C Action        ${x}    ${y}
 
 
 
