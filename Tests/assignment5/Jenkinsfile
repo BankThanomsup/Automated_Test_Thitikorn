@@ -11,7 +11,9 @@ pipeline {
         stage('Install Robot Framework') {
             steps {
                 bat '''
-                pip install --quiet robotframework robotframework-seleniumlibrary
+                pip install --quiet robotframework
+                pip install --quiet robotframework-seleniumlibrary
+                pip install --quiet robotframework-requests
                 '''
             }
         }
