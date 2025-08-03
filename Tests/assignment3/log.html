@@ -5,60 +5,16 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 7.3.2 (Python 3.13.3 on win32)" name="Generator">
+<meta content="Robot Framework 6.0 (Python 3.13.3 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
-<style media="all">
-:root {
-    --text-color: black;
-    --background-color: white;
-    --primary-color: #ddd;
-    --secondary-color: #ccc;
-    --link-color: #15c;
-    --link-hover-color: #61c;
-    --highlight-color: #eee;
-    --target-color: #f9f9f9;
-    --pass-color: #97bd61;
-    --fail-color: #ce3e01;
-    --warn-color: #fed84f;
-    --pass-link-color: #098a09;
-    --warn-link-color: #927201;
-    --fail-link-color: #ce3e01;
-    --ascending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
-    --descending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
-}
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
-    }
-}
-[data-theme="dark"] {
-    --text-color: #e2e1d7;
-    --background-color: #1c2227;
-    --primary-color: #26373b;
-    --secondary-color: #424f5a;
-    --link-color: #8cc4ff;
-    --link-hover-color: #bb86fc;
-    --highlight-color: #002b36;
-    --target-color: #1a252e;
-    --pass-link-color: #97bd61;
-    --warn-link-color: #fed84f;
-    --fail-link-color: #ff9b8f;
-    --ascending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAAfn5+////f/cqYgAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
-    --descending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAA////fn5+K6jOaAAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
-}
+<style media="all" type="text/css">
 /* Generic and misc styles */
 body {
     font-family: Helvetica, sans-serif;
     font-size: 0.8em;
-    color: black; /* Fallback value */
-    color: var(--text-color);
+    color: black;
     padding: 6px;
-    background: white; /* Fallback value */
-    background: var(--background-color);
-    margin-left: 15px;
-}
-body[theme-toggled] {
-    transition: background 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+    background: white;
 }
 table {
     table-layout: fixed;
@@ -73,37 +29,20 @@ br {
     mso-data-placement: same-cell; /* maintain line breaks in Excel */
 }
 hr {
-    background: #ccc; /* Fallback value */
-    background: var(--secondary-color);
+    background: #ccc;
     height: 1px;
     border: 0;
 }
 a, a:link, a:visited {
     text-decoration: none;
-    color: #15c; /* Fallback value */
-    color: var(--link-color);
+    color: #15c;
 }
 a > img {
-    border-width: 1px !important;
-    border-style: solid !important;
-    border-color: #15c !important; /* Fallback value */
-    border-color: var(--link-color) !important;
+    border: 1px solid #15c !important;
 }
 a:hover, a:active {
     text-decoration: underline;
-    color: #61c; /* Fallback value */
-    color: var(--link-hover-color);
-}
-select {
-    background-color: white; /* Fallback value */
-    background-color: var(--background-color);
-    color: black; /* Fallback value */
-    color: var(--text-color);
-    border-width: 2px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
-    border-radius: 4px;
+    color: #61c;
 }
 .parent-name {
     font-size: 0.7em;
@@ -116,7 +55,7 @@ select {
 #header {
     width: 65em;
     height: 3em;
-    margin: 20px 0 6px 0;
+    margin: 6px 0;
 }
 h1 {
     float: left;
@@ -144,17 +83,14 @@ h2 {
 }
 /* Status text colors -- !important allows using them in links */
 .fail {
-    color: #ce3e01 !important; /* Fallback value */
-    color: var(--fail-link-color) !important;
+    color: #ce3e01 !important;
     font-weight: bold;
 }
 .pass {
-    color: #098a09 !important; /* Fallback value */
-    color: var(--pass-link-color) !important;
+    color: #098a09 !important;
 }
 .skip {
-    color: #927201 !important; /* Fallback value */
-    color: var(--warn-link-color) !important;
+    color: #927201 !important;
     font-weight: bold;
 }
 .label {
@@ -162,10 +98,8 @@ h2 {
     font-size: 0.75em;
     letter-spacing: 1px;
     white-space: nowrap;
-    color: black; /* Fallback value */
-    color: var(--text-color);
-    background-color: #ddd; /* Fallback value */
-    background-color: var(--primary-color);
+    color: black;
+    background-color: #ddd;
     border-radius: 3px;
 }
 .label.debug, .label.trace, .label.error, .label.keyword {
@@ -175,18 +109,15 @@ h2 {
     font-weight: bold;
 }
 .label.pass {
-    background-color: #97bd61; /* Fallback value */
-    background-color: var(--pass-color);
+    background-color: #97bd61;
     color: #000 !important;
 }
 .label.fail, .label.error {
-    background-color: #ce3e01; /* Fallback value */
-    background-color: var(--fail-color);
+    background-color: #ce3e01;
     color: #fff !important;
 }
 .label.skip, .label.warn {
-    background-color: #fed84f; /* Fallback value */
-    background-color: var(--warn-color);
+    background-color: #fed84f;
     color: #000 !important;
 }
 /* Top right header */
@@ -215,8 +146,7 @@ h2 {
     padding: 0.3em 0;
     font-size: 0.9em;
     border-bottom-left-radius: 4px;
-    background: #ddd; /* Fallback value */
-    background: var(--primary-color);
+    background: #ddd;
 }
 /* Statistics table */
 .statistics {
@@ -226,20 +156,15 @@ h2 {
     margin-bottom: 1em;
 }
 .statistics tr:hover {
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #f4f4f4;
     cursor: pointer;
 }
 .statistics th, .statistics td {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+    border: 1px solid #ccc;
     padding: 0.1em 0.3em;
 }
 .statistics th {
-    background-color: #ddd; /* Fallback value */
-    background-color: var(--primary-color);
+    background-color: #ddd;
     padding: 0.2em 0.3em;
 }
 .statistics td {
@@ -275,33 +200,27 @@ th.stats-col-graph:hover {
 }
 /* Statistics graph */
 .graph, .empty-graph {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+    border: 1px solid #ccc;
     width: auto;
     height: 7px;
     padding: 0;
+    background: #aaa;
 }
 .empty-graph {
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #eee;
 }
 .pass-bar, .fail-bar, .skip-bar {
     float: left;
     height: 100%;
 }
 .fail-bar {
-    background: #ce3e01; /* Fallback value */
-    background: var(--fail-color);
+    background: #ce3e01;
 }
 .pass-bar {
-    background: #97bd61; /* Fallback value */
-    background: var(--pass-color);
+    background: #97bd61;
 }
 .skip-bar {
-    background: #fed84f; /* Fallback value */
-    background: var(--warn-color);
+    background: #fed84f;
 }
 /* Tablesorter - adapted from provided Blue Skin */
 .tablesorter-header {
@@ -311,84 +230,30 @@ th.stats-col-graph:hover {
     cursor: pointer;
 }
 .tablesorter-header:hover {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--secondary-color);
+    background-color: #ccc;
 }
 .tablesorter-headerAsc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==); /* Fallback value */
-    background-image: var(--ascending-icon);
-    background-color: #ccc !important; /* Fallback value */
-    background-color: var(--secondary-color) !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
+    background-color: #ccc !important;
 }
 .tablesorter-headerDesc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==); /* Fallback value */
-    background-image: var(--descending-icon);
-    background-color: #ccc !important; /* Fallback value */
-    background-color: var(--secondary-color) !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
+    background-color: #ccc !important;
 }
 .sorter-false {
     background-image: none;
     cursor: default;
 }
 .sorter-false:hover {
-    background-color: #ddd; /* Fallback value */
-    background-color: var(--primary-color);
-}
-#theme-toggle {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 28px;
-    height: 28px;
-    border: none;
-    padding: 4px;
-    z-index: 1000;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background: var(--highlight-color);
-}
-[data-theme="dark"] .dark-mode-icon,
-[data-theme="light"] .light-mode-icon {
-    display: none;
-}
-[data-theme="dark"] .light-mode-icon,
-[data-theme="light"] .dark-mode-icon {
-    display: block;
-}
-@keyframes highlight {
-    0% {
-        background: var(--primary-color)
-    }
-    100% {
-        background: var(--target-color);
-    }
-}
-:target {
-    background: var(--target-color);
-    transition: background 0.3s;
-    animation: highlight 4s;
+    background-color: #ddd;
 }
 </style>
-<style media="all">
+<style media="all" type="text/css">
 /* Icons are from Open Iconic <https://useiconic.com/open/>.
    Licensed under the MIT License. */
-:root {
-    --icon-filter: invert(0);
-    --icon-highlight: var(--secondary-color);
-    --elapsed-color: #666;
-}
-/* @media (prefers-color-scheme: dark) { */
-[data-theme="dark"] {
-    --icon-filter: invert(1);
-    --icon-highlight: #a39990;
-    --elapsed-color: #999;
-}
 /* Containers */
 .suite, .test, #errors {
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     padding: 0.3em 0.2em;
     margin: 0.2em 0;
 }
@@ -417,10 +282,8 @@ th.stats-col-graph:hover {
 }
 .element-header:hover {
     cursor: pointer;
-    background-color: #eee; /* Fallback value */
-    background-color: var(--highlight-color);
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+    background-color: #eee;
+    border-color: #ccc;
 }
 .element-header-toggle {
     position: absolute;
@@ -430,14 +293,10 @@ th.stats-col-graph:hover {
     background-position: center;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0JChSkZz20AAAAGklEQVQI12NgQAKMDKzInP8IDhOqMk4G7AAANQwBE427PYUAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2Mmg4di0yaC04eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzKSIgLz4KPC9zdmc+), none;
-    filter: var(--icon-filter);
     height: 10px;
     width: 10px;
     background-size: 6px 6px;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--icon-highlight);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     border-radius: 2px;
 }
 .closed > .element-header-toggle {
@@ -445,8 +304,7 @@ th.stats-col-graph:hover {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0zIDB2M2gtM3YyaDN2M2gydi0zaDN2LTJoLTN2LTNoLTJ6IiAvPgo8L3N2Zz4=), none;
 }
 .element-header:hover > .element-header-toggle {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--icon-highlight);
+    background-color: #ccc;
 }
 .element-header-right:hover ~ .element-header-toggle {
     background-color: transparent;
@@ -466,31 +324,23 @@ th.stats-col-graph:hover {
 }
 .name {
     font-weight: bold;
-    white-space: pre-wrap;
-}
-.arg, .assign {
-    white-space: pre-wrap;
 }
 .elapsed {
     float: right;
-    color: #666; /* Fallback value */
-    color: var(--elapsed-color);
+    color: #666;
     padding-left: 1em;
 }
 .link {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAHlJREFUGJVtzrEJwmAQBtCn6ASuIKTIBhY2gmghBiJYB1udwk10B8FJbKMBcQFbtbkfJHrVwfu+4/idJR64Y9H7E3higj5O3S8Y44ApLnjhnXCNGhV2yNGggDJwiC02gavUbpDFvscRo4QdXOMKDHBufz3HLYKzNn4AbSkV3fncGQYAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik01Ljg4LjAzYy0uMTguMDEtLjM2LjAzLS41My4wOS0uMjcuMS0uNTMuMjUtLjc1LjQ3YS41LjUgMCAxIDAgLjY5LjY5Yy4xMS0uMTEuMjQtLjE3LjM4LS4yMi4zNS0uMTIuNzgtLjA3IDEuMDYuMjIuMzkuMzkuMzkgMS4wNCAwIDEuNDRsLTEuNSAxLjVjLS40NC40NC0uOC40OC0xLjA2LjQ3LS4yNi0uMDEtLjQxLS4xMy0uNDEtLjEzYS41LjUgMCAxIDAtLjUuODhzLjM0LjIyLjg0LjI1Yy41LjAzIDEuMi0uMTYgMS44MS0uNzhsMS41LTEuNWMuNzgtLjc4Ljc4LTIuMDQgMC0yLjgxLS4yOC0uMjgtLjYxLS40NS0uOTctLjUzLS4xOC0uMDQtLjM4LS4wNC0uNTYtLjAzem0tMiAyLjMxYy0uNS0uMDItMS4xOS4xNS0xLjc4Ljc1bC0xLjUgMS41Yy0uNzguNzgtLjc4IDIuMDQgMCAyLjgxLjU2LjU2IDEuMzYuNzIgMi4wNi40Ny4yNy0uMS41My0uMjUuNzUtLjQ3YS41LjUgMCAxIDAtLjY5LS42OWMtLjExLjExLS4yNC4xNy0uMzguMjItLjM1LjEyLS43OC4wNy0xLjA2LS4yMi0uMzktLjM5LS4zOS0xLjA0IDAtMS40NGwxLjUtMS41Yy40LS40Ljc1LS40NSAxLjAzLS40NC4yOC4wMS40Ny4wOS40Ny4wOWEuNS41IDAgMSAwIC40NC0uODhzLS4zNC0uMi0uODQtLjIyeiIKICAvPgo8L3N2Zz4=), none;
-    filter: var(--icon-filter);
 }
 .expand {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUGJVjYCACKDAwMByA0ljFDjAwMPxnYGB4ABVQgLL/Q+VQBB6gseGmIivCkERXhFUSWRFOSawAAEl7E3uv1iMcAAAAAElFTkSuQmCC);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0xLjUgMGwtMS41IDEuNSA0IDQgNC00LTEuNS0xLjUtMi41IDIuNS0yLjUtMi41eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxKSIgLz4KPC9zdmc+), none;
-    filter: var(--icon-filter);
 }
 .collapse {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAC5JREFUGJVjYCARNEAxTsn/UIyhCFkSQxG6ThQ+C5IpjWhG1yNb4YDFTdjEMAEACi8Q++9Y9TAAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik00IDBsLTQgNCAxLjUgMS41IDIuNS0yLjUgMi41IDIuNSAxLjUtMS41LTQtNHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMSkiIC8+Cjwvc3ZnPg==), none;
-    filter: var(--icon-filter);
 }
 .expand, .collapse, .link {
     float: left;
@@ -502,10 +352,7 @@ th.stats-col-graph:hover {
     background-size: 8px 8px;
     background-repeat: no-repeat;
     background-position: center;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--icon-highlight);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     border-radius: 2px;
 }
 .link {
@@ -515,8 +362,7 @@ th.stats-col-graph:hover {
     visibility: visible;
 }
 .expand:hover, .collapse:hover, .link:hover {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--icon-highlight);
+    background-color: #ccc;
 }
 /* Messages and errors */
 .messages .time, .messages .message {
@@ -557,16 +403,11 @@ th.stats-col-graph:hover {
 .message-row:hover .select-message div {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0MOzhWKZQOAAAASUlEQVQY032PsRHAIAwDX9BkicD+W8UMEqegAQJWKZ/+3sLZJhFGQEZzNaIa4ibh66En867VNaIeoP5WppNuIGoAlOm3g5VC1AdYeQv1BZPRSgAAAABJRU5ErkJggg==);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2MWg4di0xaC04em0wIDJ2MWg2di0xaC02em0wIDJ2MWg4di0xaC04em0wIDJ2MWg2di0xaC02eiIgLz4KPC9zdmc+), none;
-    filter: var(--icon-filter);
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--icon-highlight);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     border-radius: 2px;
 }
 .select-message:hover div {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--icon-highlight);
+    background-color: #ccc;
     cursor: pointer;
 }
 /* Message tables - these MUST NOT be combined together because otherwise
@@ -598,7 +439,7 @@ th.stats-col-graph:hover {
     cursor: default;
 }
 </style>
-<style media="print">
+<style media="print" type="text/css">
 body {
     background: white !important;
     padding: 0;
@@ -638,7 +479,7 @@ a:link, a:visited {
     background: #ddd !important;
 }
 </style>
-<style media="all">
+<style media="all" type="text/css">
 #javascript-disabled {
     width: 600px;
     margin: 100px auto 0 auto;
@@ -661,7 +502,7 @@ a:link, a:visited {
     font-style: italic;
 }
 </style>
-<style media="all">
+<style media="all" type="text/css">
 .doc > * {
     margin: 0.7em 1em 0.1em 1em;
     padding: 0;
@@ -673,12 +514,14 @@ a:link, a:visited {
     margin-top: 0.1em;
 }
 .doc table {
+    border: 1px solid #ccc;
     background: transparent;
     border-collapse: collapse;
     empty-cells: show;
     font-size: 0.9em;
 }
 .doc table th, .doc table td {
+    border: 1px solid #ccc;
     background: transparent;
     padding: 0.1em 0.3em;
     height: 1.2em;
@@ -688,32 +531,24 @@ a:link, a:visited {
     letter-spacing: 0.1em;
 }
 .doc pre {
-    border-radius: 2px;
     font-size: 1.1em;
     letter-spacing: 0.05em;
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #f4f4f4;
 }
 .doc code {
-    border-radius: 2px;
     padding: 0 0.2em;
     letter-spacing: 0.05em;
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #eee;
 }
 .doc li {
     list-style-position: inside;
     list-style-type: square;
 }
-.doc img, .doc table, .doc table th, .doc table td {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+.doc img {
+    border: 1px solid #ccc;
 }
 .doc hr {
-    background: #ccc; /* Fallback value */
-    background: var(--secondary-color);
+    background: #ccc;
     height: 1px;
     border: 0;
 }
@@ -724,13 +559,7 @@ function toggleSuite(suiteId) {
     toggleElement(suiteId, ['keyword', 'suite', 'test']);
 }
 function toggleTest(testId) {
-    var test = window.testdata.findLoaded(testId);
-    var autoExpand = test.status == "FAIL" || test.status == "SKIP";
-    var closed = $('#' + testId).children('.element-header').hasClass('closed');
-    if (autoExpand && closed)
-        expandFailed(test);
-    else
-        toggleElement(testId, ['keyword']);
+    toggleElement(testId, ['keyword']);
 }
 function toggleKeyword(kwId) {
     toggleElement(kwId, ['keyword']);
@@ -794,7 +623,7 @@ function loadAndExpandElementIds(ids) {
     }
 }
 function expandFailed(element) {
-    if (element.status == "FAIL" || (element.type == "test" && element.status == "SKIP")) {
+    if (element.status == "FAIL") {
         window.elementsToExpand = [element];
         window.expandDecider = function (e) {
             return e.status == "FAIL";
@@ -1018,6 +847,7 @@ window.model = (function () {
         suite.populateSuites = createIterablePopulator('Suite');
         suite.childrenNames = ['keyword', 'suite', 'test'];
         suite.callWhenChildrenReady = function (callable) { callable(); };
+        suite.message = data.message;
         suite.children = function () {
             return suite.keywords().concat(suite.tests()).concat(suite.suites());
         };
@@ -1108,7 +938,6 @@ window.model = (function () {
             name: data.name,
             doc: data.doc,
             status: data.status,
-            message: data.message,
             times: data.times,
             id: data.parent ? data.parent.id + '-' + data.id : data.id
         };
@@ -1129,6 +958,7 @@ window.model = (function () {
                 return test.keywords();
         };
         test.tags = data.tags;
+        test.message = data.message;
         test.matchesTagPattern = function (pattern) {
             return containsTagPattern(test.tags, pattern);
         };
@@ -1139,12 +969,13 @@ window.model = (function () {
     }
     function Keyword(data) {
         var kw = createModelObject(data);
+        var flatTypes = ['RETURN', 'BREAK', 'CONTINUE'];
         kw.libname = data.libname;
         kw.fullName = (kw.libname ? kw.libname + '.' : '') + kw.name;
         kw.type = data.type;
         kw.template = 'keywordTemplate';
         kw.arguments = data.args;
-        kw.assign = data.assign + (data.assign ? ' =  ' : '');
+        kw.assign = data.assign + (data.assign ? ' =' : '');
         kw.tags = data.tags;
         kw.timeout = data.timeout;
         kw.populateKeywords = createIterablePopulator('Keyword');
@@ -1255,48 +1086,58 @@ window.stats = (function () {
             });
     }
     function calculatePercents(total, passed, failed, skipped) {
-        if (total == 0)
+        if (total == 0) {
             return [0.0, 0.0, 0.0];
+        }
         var pass = 100.0 * passed / total;
         var skip = 100.0 * skipped / total;
         var fail = 100.0 * failed / total;
         if (pass > 0 && pass < 0.1)
-            pass = 0.1;
+            pass = 0.1
         if (fail > 0 && fail < 0.1)
-            fail = 0.1;
+            fail = 0.1
         if (skip > 0 && skip < 0.1)
-            skip = 0.1;
+            skip = 0.1
         if (pass > 99.95 && pass < 100)
-            pass = 99.9;
+            pass = 99.9
         if (fail > 99.95 && fail < 100)
-            fail = 99.9;
+            fail = 99.9
         if (skip > 99.95 && skip < 100)
-            skip = 99.9;
-        return [round1(pass), round1(skip), round1(fail)];
+            skip = 99.9
+        return [Math.round(pass*10)/10, Math.round(skip*10)/10, Math.round(fail*10)/10];
     }
     function calculateWidths(num1, num2, num3) {
         if (num1 + num2 + num3 === 0)
             return [0.0, 0.0, 0.0];
         // Make small percentages better visible
         if (num1 > 0 && num1 < 1)
-            num1 = 1.0;
+            num1 = 1
         if (num2 > 0 && num2 < 1)
-            num2 = 1.0;
+            num2 = 1
         if (num3 > 0 && num3 < 1)
-            num3 = 1.0;
+            num3 = 1
         // Handle situation where some are rounded up
         while (num1 + num2 + num3 > 100) {
-            if (num1 >= num2 && num1 >= num3)
-                num1 = round1(num1 - 0.1);
-            else if (num2 >= num1 && num2 >= num3)
-                num2 = round1(num2 - 0.1);
-            else
-                num3 = round1(num3 - 0.1);
+            if (num1 > num2 && num1 > num3)
+                num1 -= 0.1;
+            else if (num2 > num1 && num2 > num3)
+                num2 -= 0.1;
+            else if (num3 > num1 && num3 > num2)
+                num3 -= 0.1;
+            else if (num1 > num3 && num1 == num2) {
+                num1 -= 0.1;
+                num2 -= 0.1;
+            }
+            else if (num1 > num2 && num1 == num3) {
+                num1 -= 0.1;
+                num3 -= 0.1;
+            }
+            else if (num2 > num1 && num2 == num3) {
+                num2 -= 0.1;
+                num3 -= 0.1;
+            }
         }
-        return [num1, num2, num3];
-    }
-    function round1(num) {
-        return Math.round(num*10) / 10;
+        return [Math.ceil(num1*10)/10, Math.ceil(num2*10)/10, Math.ceil(num3*10)/10];
     }
     return {
         Statistics: Statistics
@@ -1513,9 +1354,8 @@ window.testdata = function () {
     var _statistics = null;
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
-    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF',
-                         'ELSE IF', 'ELSE', 'RETURN', 'VAR', 'TRY', 'EXCEPT', 'FINALLY',
-                         'WHILE', 'GROUP', 'CONTINUE', 'BREAK', 'ERROR'];
+    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
+                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1558,7 +1398,6 @@ window.testdata = function () {
         return createKeyword(parent, element, strings, index - messages.length);
     }
     function createKeyword(parent, element, strings, index) {
-        var status = element[8];
         var kw = model.Keyword({
             parent: parent,
             type: KEYWORD_TYPES[element[0]],
@@ -1574,12 +1413,7 @@ window.testdata = function () {
                 this.doc = function () { return doc; };
                 return doc;
             },
-            status: parseStatus(status),
-            message: function () {
-                var msg = status.length == 4 ? strings.get(status[3]) : '';
-                this.message = function () { return msg; };
-                return msg;
-            },
+            status: parseStatus(element[8], strings),
             times: model.Times(times(element[8])),
             isChildrenLoaded: typeof(element[9]) !== 'number'
         });
@@ -1790,20 +1624,6 @@ window.testdata = function () {
 }();
 </script>
 <script type="text/javascript">
-const lightModeIcon = `
-<svg class="light-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
-    viewBox="0 0 24 24" fill="var(--text-color)">
-    <rect fill="none" height="24" width="24" />
-    <path
-        d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z" />
-</svg>`
-const darkModeIcon = `
-<svg class="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
-    viewBox="0 0 24 24" fill="var(--text-color)">
-    <rect fill="none" height="24" width="24" />
-    <path
-        d="M11.01,3.05C6.51,3.54,3,7.36,3,12c0,4.97,4.03,9,9,9c4.63,0,8.45-3.5,8.95-8c0.09-0.79-0.78-1.42-1.54-0.95 c-0.84,0.54-1.84,0.85-2.91,0.85c-2.98,0-5.4-2.42-5.4-5.4c0-1.06,0.31-2.06,0.84-2.89C12.39,3.94,11.9,2.98,11.01,3.05z" />
-</svg>`
 function removeJavaScriptDisabledWarning() {
     // Not using jQuery here for maximum speed
     document.getElementById('javascript-disabled').style.display = 'none';
@@ -1839,10 +1659,6 @@ function setTitle(suiteName, type) {
 function addHeader() {
     var generated = util.timestamp(window.output.generated);
     $.tmpl('<h1>${title}</h1>' +
-           '<button id=theme-toggle>' +
-             lightModeIcon +
-             darkModeIcon +
-           '</button>' +
            '<div id="generated">' +
              '<span>Generated<br>${generated}</span><br>' +
              '<span id="generated-ago">${ago} ago</span>' +
@@ -1854,7 +1670,6 @@ function addHeader() {
         ago: util.createGeneratedAgoString(generated),
         title: document.title
     }).appendTo($('#header'));
-    document.getElementById('theme-toggle')?.addEventListener('click', theme.onClick);
 }
 function addReportOrLogLink(myType) {
     var url;
@@ -1983,116 +1798,30 @@ function stopPropagation(event) {
     if (event.stopPropagation)
         event.stopPropagation();
 }
-const theme = function () {
-    const storageKey = 'theme-preference';
-    const urlParams = new URLSearchParams(window.location.search);
-    var storage;
-    var theme;
-    function init(givenStorage) {
-        storage = givenStorage;
-        theme = { value: getPreference() };
-        document.body.setAttribute('data-theme', theme.value);
-        reflectPreference();
-        window.matchMedia('(prefers-color-scheme: dark)')
-            .addEventListener('change', ({matches:isDark}) => {
-                theme.value = isDark ? 'dark' : 'light';
-                setPreference();
-            });
-        window.addEventListener('storage', ({key, newValue}) => {
-            if (key === storage.fullKey(storageKey)) {
-                theme.value = newValue === 'dark' ? 'dark' : 'light';
-                setPreference();
-            }
-        });
-    }
-    function getPreference() {
-        if (urlParams.has('theme')) {
-            var urlTheme = urlParams.get('theme') === 'dark' ? 'dark' : 'light';
-            storage.set(storageKey, urlTheme);
-            urlParams.delete('theme');
-            return urlTheme;
-        }
-        if (storage.get(storageKey))
-            return storage.get(storageKey) === 'dark' ? 'dark' : 'light';
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    function setPreference() {
-        storage.set(storageKey, theme.value);
-        reflectPreference();
-    }
-    function reflectPreference() {
-        document.body.setAttribute('data-theme', theme.value);
-        document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value);
-        const event = new Event('theme-change', {value: theme.value});
-        document.dispatchEvent(event);
-    }
-    function onClick() {
-        theme.value = theme.value === 'light' ? 'dark' : 'light';
-        document.body.setAttribute('theme-toggled', "");
-        setPreference();
-    }
-    return {init: init, getPreference: getPreference, setPreference: setPreference,
-        reflectPreference: reflectPreference, onClick: onClick};
-}();
-</script>
-<script type="text/javascript">
-storage = function () {
-    var prefix = 'robot-framework-';
-    var storage;
-    function init(user) {
-        if (user)
-            prefix += user + '-';
-        storage = getStorage();
-    }
-    function getStorage() {
-        // Use localStorage if it's accessible, normal object otherwise.
-        // Inspired by https://stackoverflow.com/questions/11214404
-        try {
-            localStorage.setItem(prefix, prefix);
-            localStorage.removeItem(prefix);
-            return localStorage;
-        } catch (exception) {
-            return {};
-        }
-    }
-    function get(key, defaultValue) {
-        var value = storage[fullKey(key)];
-        if (typeof value === 'undefined')
-            return defaultValue;
-        return value;
-    }
-    function set(key, value) {
-        storage[fullKey(key)] = value;
-    }
-    function fullKey(key) {
-        return prefix + key;
-    }
-    return {init: init, get: get, set: set, fullKey: fullKey};
-}();
 </script>
 <script type="text/javascript">
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,0,[],[1,0,2754],[],[[4,0,5,[],[1,722,1022],[[0,6,7,0,8,9,0,0,[1,723,1],[[723,2,10]]],[0,11,12,0,13,14,15,0,[1,724,1],[[725,2,16]]],[0,17,7,0,18,19,20,0,[1,725,1013],[[1738,2,21],[1738,2,22],[1738,2,23],[1738,2,24]]],[0,25,12,0,26,27,0,0,[1,1739,1],[[1739,2,28]]],[0,29,7,0,30,31,0,0,[1,1739,0],[]],[0,32,12,0,33,34,35,0,[1,1740,0],[[1740,2,36]]],[0,37,12,0,38,39,40,0,[1,1740,0],[[1741,2,41]]],[0,42,43,0,44,45,0,0,[1,1741,0],[]],[0,46,12,0,47,48,0,0,[1,1741,0],[[1741,2,49]]],[0,50,12,0,51,52,0,0,[1,1742,0],[]],[0,50,12,0,51,53,0,0,[1,1742,0],[]],[0,50,12,0,51,54,0,0,[1,1743,0],[]]]],[55,0,56,[],[1,1744,1010],[[0,6,7,0,8,9,0,0,[1,1745,1],[[1745,2,10]]],[0,11,12,0,13,14,15,0,[1,1746,0],[[1746,2,16]]],[0,17,7,0,18,57,20,0,[1,1747,1004],[[2750,2,58],[2751,2,59],[2751,2,23],[2751,2,60]]],[0,25,12,0,26,27,0,0,[1,2751,1],[[2752,2,61]]],[0,29,7,0,30,62,0,0,[1,2752,0],[]],[0,50,12,0,51,63,0,0,[1,2753,0],[]]]]],[],[2,2,0,0]];
+window.output["suite"] = [1,2,3,0,[],[1,0,1706],[],[[4,0,5,[],[1,497,239],[[0,6,7,0,8,9,0,0,[1,498,1],[[498,2,10]]],[0,11,12,0,13,14,15,0,[1,499,1],[[500,2,16]]],[0,17,7,0,18,19,20,0,[1,500,229],[[729,2,21],[729,2,22],[729,2,23],[729,2,24]]],[0,25,12,0,26,27,0,0,[1,729,1],[[730,2,28]]],[0,29,7,0,30,31,0,0,[1,730,0],[]],[0,32,12,0,33,34,35,0,[1,730,1],[[731,2,36]]],[0,37,12,0,38,39,40,0,[1,731,1],[[732,2,41]]],[0,42,43,0,44,45,0,0,[1,732,1],[]],[0,46,12,0,47,48,0,0,[1,733,1],[[734,2,49]]],[0,50,12,0,51,52,0,0,[1,734,1],[]],[0,50,12,0,51,53,0,0,[1,735,0],[]],[0,50,12,0,51,54,0,0,[1,735,1],[]]]],[55,0,56,[],[1,737,969],[[0,6,7,0,8,9,0,0,[1,738,0],[[738,2,10]]],[0,11,12,0,13,14,15,0,[1,739,0],[[739,2,16]]],[0,17,7,0,18,57,20,0,[1,739,964],[[1703,2,58],[1703,2,59],[1703,2,23],[1703,2,60]]],[0,25,12,0,26,27,0,0,[1,1704,0],[[1704,2,61]]],[0,29,7,0,30,62,0,0,[1,1704,1],[]],[0,50,12,0,51,63,0,0,[1,1705,0],[]]]]],[],[2,2,0,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Api Test","*C:\\Users\\User\\Downloads\\Automated_Test_Thitikorn\\Tests\\assignment3\\api_test.robot","*api_test.robot","*Get user profile success","*<p>To verify get user profile API returns correct data for existing user\x3c/p>","*Create Session","*RequestsLibrary","*<p>Create Session: create a HTTP session to a server\x3c/p>","*httpSession    ${BASE_URL}","eNptjEEOwjAMBL/iB0SUc6WckDhy4QWGmsYixMF2KhDi76i0x+5tdlZ7UELnMsKZzFgKNJupB8yMFpN7XU2ApvlfWN91Sk8l23HpsHKARDiQWvx8A2zlKnJnWjw2T/EkhQI4P0iar1RVXvNooYmUb+94xGy0fTrQpY1xDz9DZD1G","*Create Dictionary","*BuiltIn","*<p>Creates and returns a dictionary based on the given <code>items\x3c/code>.\x3c/p>","*x-api-key=${API_KEY}    Accept=application/json","*&amp;{headers}","*&amp;{headers} = { x-api-key=reqres-free-v1 | Accept=application/json }","*GET On Session","*<p>Sends a GET request on a previously created HTTP Session.\x3c/p>","*httpSession    /users/${USER_ID}    headers=&amp;{headers}    expected_status=anything","*${response}","*GET Request : url=https://reqres.in/api/users/12 \n path_url=/api/users/12 \n headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'x-api-key': 'reqres-free-v1'} \n body=None \n ","eNqtVdtu4zYQfe9XEAK2AYrQFiVZVhwQaZrbBpsmWcfIBd3CoMmRzY0sKiRlxw3y7yUl5frUhwKGYc+cGXLOzByeHE3QGEylSgNohGpd0IW1lRn1+xoeNJieLPuskv3agDZ9EqFfkLHM1oZGYbiNNDCjSnrxzdkXwIQD0aetQ2Zha4S2rpjdRmGE9us5isJogEg6ijL3QSd/Tra20daBKi2UFk82VRPAqqqQnFmpyv5Pl3gX8QXTBiytbY4zHzLRrDQ5aHxUciVkOfdxfFGX9yC6lCVwn8E77gEqzAq5gvfHvQ+d/yMr79vnHIzBHqJVgfeLQq3xhZZz2ST6zWOOLGtibvoBGaRYjKuLh/0rey1vHr9/X90Vw5Lsk5Pbk+N14OHnUHj0U6ChUtpOrQpGwQK0uq9xCUWw7Rwt9dOOu2D0V3AtWfD3drBkj1M2h2AUp47owNTN/aa5Zk1xwSjshWQ7yJksag0f7OTZnz52TSjkUlp85r/9TUgYfvRcKkf3pnPtrmn6yT+GJZNlx9RO9tnpGuMdXRS4rmjXmLekxmrJLVYNi3i9gBJzrRzLraWN8tTgiWqZmmtVV59ZglJUSpbW0/MUuBn1gG5KHaLXgntcLfst02bP0DP1sLDh5rS8PX6MxTlJv0R/kMnpyW10wPPV4ZJc305EFd3crS8PTr/Ehz9+1GEYpUYKyhO+M4wGOSZsFuIkERnOojDHSRyKPBqSDAjp4NZQMhwkZEDinUHw/Llvz28lOhLd3HWF+GLfSqT/fzW/smW1+19racAfK/H3doPYTEaPoO6urjkWtPfd4veriy8qP3tNWaUypczzFnSs2fKD9/Do/K51jeGhBmPxqWhGaCZ20pzkWIgIME85wWIW5ZjlAAlJwySLB23crRufS63s246TXbRUAuisUPy+WeV5IyZDEjdLz/gCXvba212HsOsQJUnS7gPPMW9ArbJ5zNfTRp+umW4G2YtD9U43nOsK9Mpx4cWnULXIC6ZbjTnG4/27Zl/SDPJIZLMdxsUwDfH5uElqmkhs3RJ16pWfJbsCDKfBXuVKU3RycNk0RVtLSRymWdz8dQHTF1MSviCmK6ZpshMOh23XXVdo2jqBr2hrLZSxtAsB6zWUklf4dLaxYGgSxfFrXGfLuvEQ4EVUb6ba7T/N4rg9ga9LQaNB1Pypy3fJ2rO4G8E8BRHHnKRxJrJYxC/jliaD5ucjDYOtZ/eAzJTY0KdAMMuC0VMgRTAikVt/p0F+5bXvkdsPtYai+P31eXICkUtt7LR0s+Zg4wbmrAV7M35tgpyRrVx2/U5A3p45uZz3c+ZU1j1zWC7diPR+VvPg2Ytv5RfRX+qj+vB2CTgTYtOTaq+2y6lRteZA27wtL866BCHrJfWP2quNux9MzkuH9dLJ/P0sPLpzgonUIJDK0VpLLx3IaWDh9B8ZxSUrkE/HUHf8HjoDi7qFRAf+MmgOJfhWIWlRrjTaqLoXPHuW/wUdtY6j","eNqtj89OAkEMxu8+RYMHvDCr8WDcAAnRgyYejCzxMgkZZgo7YWjXaXcJb+8g+gZemv75+uvXp9quBLP8RPvMR0rsgthFr3xwimHdoOi6aaPGPWeyZkAa7FvcWImKk875vduh2D6nFDf31jMReo1MHXMy3am+u318qOGVBH2f8QO/+kL8dJki7WpY0YA5biMGeGma9yXkiwCiwAaLBA4uIChDy6U7LuOMYiKNDSxCOAs8Zi0EX+zCBVbSYuCMEM1Mu3QCF4YoGAwsEWuYOmgzbmejVrWTuqp+7ZuMLmiLgX25wRVSlQpWtCr7jjyGSS/lX9PqIV1rksnx8oiM5v+GmlZufgXwV5pzcvMNEMac9A==","*${response} = &lt;Response [200]&gt;","*Log","*<p>Logs the given message with the given level.\x3c/p>","*Response Text=${response.text}","*Response Text={\"data\":{\"id\":12,\"email\":\"rachel.howell@reqres.in\",\"first_name\":\"Rachel\",\"last_name\":\"Howell\",\"avatar\":\"https://reqres.in/img/faces/12-image.jpg\"},\"support\":{\"url\":\"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral\",\"text\":\"Tired of writing endless social media content? Let Content Caddy generate it for you.\"}}","*Status Should Be","*<p>Fails if response status code is different than the expected.\x3c/p>","*200    ${response}","*Evaluate","*<p>Evaluates the given expression in Python and returns the result.\x3c/p>","*json.loads(\"\"\"${response.text}\"\"\")    modules=json","*${json}","eNqNj88KgzAMh1+lyKCXrUWPorLjznuBETRqpa0urRtDfPe1HvYHdtgpyccv+chuGdxoV1ayhTfggeehUU0oabZnHA0oHQZOUPeoRT/eUesj4ZXQCWV5yLSKnL9YMBiD5y0YuYYPfNoWI4Zb0FBkBbCesC2T3vvJ5VK+zkplOtlCjU6m2UEZ6FAMU5dU/yYLCRVfg83N0zSS396aSf/U1qP1aH0NTfMQ6i355vGkEOIJbHhktw==","*Set Variable","*<p>Returns the given values which can then be assigned to a variables.\x3c/p>","*${json['data']}","*${data}","eNqNjcEKwjAQRH8lFCEXTWiPpS0ePfsDsrSbZCWpdRP0UPrvJj2IR4/zeDNzWCdIsIlerJIm2Yq6OQqJAcjnIBlGh165xxu9PzM+GaOiWWbHEMd0myFgEa+7WLiHH3zZiwXDK/9wYR0Ix2j6yqW0xFbr76ymYLWBEaOumxMFsKjui62Gf81OwyC3D4qBRbM=","*Dictionary Should Contain Value","*Collections","*<p>Fails if <code>value\x3c/code> is not found from <code>dictionary\x3c/code>.\x3c/p>","*${data}    rachel.howell@reqres.in","*Should Be Equal As Integers","*<p>Fails if objects are unequal after converting them to integers.\x3c/p>","*${data['id']}    ${USER_ID}","*Argument types are:\n&lt;class 'int'&gt;\n&lt;class 'str'&gt;","*Should Be Equal","*<p>Fails if the given objects are unequal.\x3c/p>","*${data['first_name']}    Rachel","*${data['last_name']}    Howell","*${data['avatar']}    <a href=\"https://reqres.in/img/faces/12-image.jpg\">https://reqres.in/img/faces/12-image.jpg\x3c/a>","*Get user profile but user not found","*<p>Verify API returns 404 and empty JSON body for non-existing user\x3c/p>","*httpSession    /users/${NOT_FOUND_ID}    headers=&amp;{headers}    expected_status=anything","*GET Request : url=https://reqres.in/api/users/1234 \n path_url=/api/users/1234 \n headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'x-api-key': 'reqres-free-v1'} \n body=None \n ","eNqtVdtu4zYQfe9XCAJaA4UZk7SuDohFEDtB2m3WddLdpN3CoKmRrY0sKiTlrBHk30tSTnN56kNfDGnOGXrmzBnqfHYdLEC3stEQTIJO1WxjTKsno5GCewX6qGpGvK1GnQalR4SOo+CHQBtuOs0iHA0DBVzLhl1KE5zJriksvAFeWDZ7HEy5gcEkGFxxMwwwDU66dUAxjQOSTGg2oXlw/tv1YBgMTmVjoDHoet/6BN62dSW4qWQz+mbPPw7EhisNhnWmRNnrlI/QrM3GJdFDuAHhEl3oDqBFvK524LEztDi5dfE8yaCkhSA8y2GVcXS58HWcCAFaI3e2kjU6qWv5gD6pal354352nJnha/fyZRRStNuft8l8dyajxU6fmbm8+AKnC9hfnGahI19C7biPoYJWKrM0MpyEG1DyrkMN1OHQAr38y4Ns4eSv8HPFw7+H4ZZ/X/I1hJNxgvEw1J2vblkq7hsMJ/gIk2FY8qruFLyJkyf37wurf11tK6uS+3WVEIzfInNpld4foOMHlrzDF7DlVVM1vuc8ew/amTjgkAUlKAXq1aHaqEoYJL2G6GEDDRJKWo37SJ/lpEHXsldqrWTXvlcJmqKVVWOcPI+h9akjHJxqGUc9+UjI7ahXWn/QLM//3NRim5fTz5zEPL5X81RdPNzMinazuL0vr07/+DWa3v3yrfv9x/H069cOY5roqmAiEnlK4xIRvsIoiooMZRSXKBrjoqQpyYCQA91oRtI4IjElOA+f3k/t6aVBKyGaPbfhWn1pkP3fvfzEt+3xf+3Ek9/24aq2JvSuOCLBoVI7GAPKYTfo9caiT63znW+qkbqpyrInnSm+fYNOZ5e3PbSA+w60QReFt8+KxinJBUp5hBGmIkWrAhP7Wq6iVZakK8z7vBtrnbmS5mXHyXGwlQWwVS3FnV9zLjbwvMOOYSeC7EQYiaLe/aJEwpP6m8xxZjfzi8Vs6hvnylvXXQatsTMTsnD+t9AVqJ1VwIKill1R1lz5m0X7ODJ2KfpFEeXH6LgALVj4obXlSnZ9OvdCK2MYGcc0Tf2rTVj2oYiOyTNjueOKxQSnuJ+kVZrFPQhixxL/WEttGD5EjeKNZi/05WpvQDOajem/eYdYRsY+VIC7GNV+qew+szGhWZ8uHpqC0bjP65pXpx1w66uEr7Iix2NB0izPk+jZQ0nc9/Cd4XDwZD8GK1ns2aN7+gdYeQbP","*${response} = &lt;Response [404]&gt;","*Response Text={}","*404    ${response}","*${response.text}    {}"]);
+window.output["strings"] = window.output["strings"].concat(["*","*Api Test","*C:\\Users\\User\\Downloads\\Automated_Test_Thitikorn\\Tests\\assignment3\\api_test.robot","*api_test.robot","*Get user profile success","*<p>To verify get user profile API returns correct data for existing user\x3c/p>","*Create Session","*RequestsLibrary","*<p>Create Session: create a HTTP session to a server\x3c/p>","*httpSession, ${BASE_URL}","eNptjEEOwjAMBL/iB0SUc6WckDhy4QWGmsYixMF2KhDi76i0x+5tdlZ7UELnMsKZzFgKNJupB8yMFpN7XU2ApvlfWN91Sk8l23HpsHKARDiQWvx8A2zlKnJnWjw2T/EkhQI4P0iar1RVXvNooYmUb+94xGy0fTrQpY1xDz9DZD1G","*Create Dictionary","*BuiltIn","*<p>Creates and returns a dictionary based on the given <code>items\x3c/code>.\x3c/p>","*x-api-key=${API_KEY}, Accept=application/json","*&amp;{headers}","*&amp;{headers} = { x-api-key=reqres-free-v1 | Accept=application/json }","*GET On Session","*<p>Sends a GET request on a previously created HTTP Session.\x3c/p>","*httpSession, /users/${USER_ID}, headers=&amp;{headers}, expected_status=anything","*${response}","*GET Request : url=https://reqres.in/api/users/12 \n path_url=/api/users/12 \n headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'x-api-key': 'reqres-free-v1'} \n body=None \n ","eNqtVdtu4zYQfe9XEAS2AYrQJmVblh0IaTbXRdJN1nFzabcwaJKyuZFIhaTsOEH+vaSkze2pD30xrJkzQ86ZmcPjwymYCFtqZQUYg8rk6dK50o67XSPujbAdqbq0lN3KCmO7JAK/AOuoq2waYbwNjKBWq/T81NuXgnIPSp+2DqgTW2OwdVmpbYB7YK9agAhHA0CS8SAZRxgc/zHd2gZb+1o5oRyabso6gJZlLhl1UqvuD594B7AlNVa4tHIZSkLI1FBlM2HQoWKaS7UIcWxZqTvB25RKsJAhOO6EKBHN5Uq8Pe5t6OJRlsG3x5iwFgWI0Tnay3O9RudGLmSd6LeAOXS0jrnuQjKIEZ+U5/d7l+5KXj98+7a6zYeK7JHjm+OjNQzwryIP6CdoRKmNmzkNx3ApjL6rkBI53PaOhvpZyx0c/w2vJIX/bMOCPszoQsBxL/ZEQ1vV95tlhtbFwTHuYLINMyrzyoh3dvIcTp/4JuSykA6dhd9wE4Lxe8+F9nRvWtfOOo0/+CeioFK1TI2Sj07fmOBoo4TvivGNeU1qnZHMIV2ziNZLoRAz2rPcWJqoQA2a6oaphdFV+ZEloXippXKBnifoZzQA2in1iE4D7jBddBum7a5Nr7KD8iz7azKNTx/vYvo51/lnTkfFat57OOHXF/njujqI/yTHn6Kjw0+9g+/fK4yj2Eqesj4bDaNBhgidY9Tv8wQlEc5Qv4d5Fg1JIghp4c6mZDjoR/2Y4BF8/ti359cSPYl+7tpCQrGvJab/fzW/0qLc+a+11OD3lYR7+0GsJ6NDQHtX3xwnTPDdoLeri87LMHt1WUpbJbOsAR0ZWrzzHhx+vW1cE3FfCevQFx7sfTIYCkwoGtF4hIa4R1FGYoyiZDCcs4zyjEdN3I0fnwuj3euOkx1QaC7Sea7ZXb3Ki1pMSG9UD+Y+ZUvxc7GDw7cI+RalpN9vFoJliNWgRtoC5uRLLVBX1NSTHNShfCMc3nUpzMqTEdQn1xXPcmoakTlCk73bemHiUYLncz4XAvfnNEafT08DwtaRyPktauUrO+vvcGFZCndLX5tOp/sXdVeMc2k0xE2LPHxWG3q9/k/vbEVNmsRx03DfkLR1CbZKG2uurUtxa3VBPtuvAJ/NN054MU96vZe41pa0k8FF0E+zmRm/+p60CCe9pPawteJpNIjqj0q9ydccwPwAzlmcjeIhJTHlCUnwy7CR5sCHFMOtZ/98zDXfpE+QU0fh+AlKDsck8svvFSgsvAkN8tuh1yLPf395nLw8ZNJYN1N+0jxsUsO8NaevxpM6yBvpymc3b+Tj9ZGTxaKbUa+x/pFDsvDz0flRLuBzkN4yrGG41HvtYc0KMMr5piP1buWKmdWVYSJt8ja8eGshuKyKNDxpLzbm/1C5UB4bhJOG+znx4M+BU2kEBzoDayODcACvgLlXf2A1kzQHIR0F7fG74Ew40K4j2A+XAQuhROgWkA5k2oCNrjrwObD8L+aqjtw=","eNqtj89OwzAMxu88hTUO47KUAdqhGpMmOIDEAbFOXCJNWeK10VKnxG7H3p6MsTfgYvnP558/P5V6zZj4N+rneKAQjWO97CW2RtBtKmTZVI0Xv4+JtBqQBv3mt5q94KQzdm9qZN2nEPz2XttIhFZ8pC7GoLpjOb2dPZTwSoy2T/iBX30mfppEnuoS1jRg8juPDl6q6n0F6SwAz7DFLIHWOASJ0MTcHedxQlaexgqWzp0EFpNkgs124QzLaTZwQrCkSHU4gnGDZ3QKVoglzA00CXePo0ak47Io/uyrhMZJgy7afCMWSMVU3c3Ud5H3DVl0k57zv6qRNlwzh8nh/AiPFv+GmhdmcQVwKdUpufkBMcuarA==","*${response} = &lt;Response [200]&gt;","*Log","*<p>Logs the given message with the given level.\x3c/p>","*Response Text=${response.text}","*Response Text={\"data\":{\"id\":12,\"email\":\"rachel.howell@reqres.in\",\"first_name\":\"Rachel\",\"last_name\":\"Howell\",\"avatar\":\"https://reqres.in/img/faces/12-image.jpg\"},\"support\":{\"url\":\"https://contentcaddy.io?utm_source=reqres&amp;utm_medium=json&amp;utm_campaign=referral\",\"text\":\"Tired of writing endless social media content? Let Content Caddy generate it for you.\"}}","*Status Should Be","*<p>Fails if response status code is different than the expected.\x3c/p>","*200, ${response}","*Evaluate","*<p>Evaluates the given expression in Python and returns the result.\x3c/p>","*json.loads(\"\"\"${response.text}\"\"\"), modules=json","*${json}","eNqNj88KgzAMh1+lyKCXrUWPorLjznuBETRqpa0urRtDfPe1HvYHdtgpyccv+chuGdxoV1ayhTfggeehUU0oabZnHA0oHQZOUPeoRT/eUesj4ZXQCWV5yLSKnL9YMBiD5y0YuYYPfNoWI4Zb0FBkBbCesC2T3vvJ5VK+zkplOtlCjU6m2UEZ6FAMU5dU/yYLCRVfg83N0zSS396aSf/U1qP1aH0NTfMQ6i355vGkEOIJbHhktw==","*Set Variable","*<p>Returns the given values which can then be assigned to a variables.\x3c/p>","*${json['data']}","*${data}","eNqNjcEKwjAQRH8lFCEXTWiPpS0ePfsDsrSbZCWpdRP0UPrvJj2IR4/zeDNzWCdIsIlerJIm2Yq6OQqJAcjnIBlGh165xxu9PzM+GaOiWWbHEMd0myFgEa+7WLiHH3zZiwXDK/9wYR0Ix2j6yqW0xFbr76ymYLWBEaOumxMFsKjui62Gf81OwyC3D4qBRbM=","*Dictionary Should Contain Value","*Collections","*<p>Fails if <code>value\x3c/code> is not found from <code>dictionary\x3c/code>.\x3c/p>","*${data}, rachel.howell@reqres.in","*Should Be Equal As Integers","*<p>Fails if objects are unequal after converting them to integers.\x3c/p>","*${data['id']}, ${USER_ID}","*Argument types are:\n&lt;class 'int'&gt;\n&lt;class 'str'&gt;","*Should Be Equal","*<p>Fails if the given objects are unequal.\x3c/p>","*${data['first_name']}, Rachel","*${data['last_name']}, Howell","*${data['avatar']}, <a href=\"https://reqres.in/img/faces/12-image.jpg\">https://reqres.in/img/faces/12-image.jpg\x3c/a>","*Get user profile but user not found","*<p>Verify API returns 404 and empty JSON body for non-existing user\x3c/p>","*httpSession, /users/${NOT_FOUND_ID}, headers=&amp;{headers}, expected_status=anything","*GET Request : url=https://reqres.in/api/users/1234 \n path_url=/api/users/1234 \n headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'x-api-key': 'reqres-free-v1'} \n body=None \n ","eNqtVV1v4jgUfd9fEUWaRVphsEMSAsga0RY61XRaRNmddndWyHFuIG2IM7YDw1T972sn6fbjaR/2BcXnnGv7nnuvOZ+tnCWoUhQKnLFTyZxutS7VuN+X8F2C6mVFn5VZv1IgVZ94A9/5xVGa6UpRH/tdRwJToqBXQjtzURWJobfAEqOmj50zpqEzdjo3VdF18MCZVhvHw17gkGgcRGOPOOdfVp2u0zkVhYZCo9WxrANYWeYZZzoTRf/e7D9x+JZJBZpWOkXR65BLKDZ6a4O8Fi6A20ALPQCUiOXZHmpujpbTO4uPwlGEY47jJEr9gDN08vmzVUw5B6WQ3VuKHE3zXBzQtcw2Wb3db1Yz02xjF1/7rof2x/MyXOznwl/u1VwvxMVXOF3C8eI0cq34CnKrfXQllELqtRbu2N2CFA8VKiB3u4Zo7F+3trnjv9w/Mub+3XV37MeabcAdD0KMu66q6tutU8nqBN0x7mHSdVOW5ZWENzh5sqcvjf95tsuMS/bX3oRg/JZZCOP0saUmBxq+45ewY1mRFXXOo+g9aWpiiTYKUpAS5KtNlZYZ10jUHqLDFgrEpTAeN0gTZa1BK9E4tZGiKt+7BEVSiqzQ1p5H1/SpFbSdahS9RtzjYtdvnFYfFT3RSz//VK4O95d8OpIfvJP9l+mna3J7+jMf3m+W138O5+z3m+gYKHL3YXD27VuFsReqLKHc56OhF6SIsBgj308iFHk4Rf4AJ6k3JBEQ0sq1omQY+J4/DDBxn97X7eklRWMimj0nYpN9SZH+/9n8ynbl5L/mUovfZmLvbRqx7owecdq7muJokJa7Ra+nFl2XtvfqtAqhiixNG9Fcst0b9mx2dddQS/hegdLoIrF4HPI4ICRCEA5j5If+ACVpwJGPSeL7kCbpKG7ibk37LKTQL3NOJs5OJEDjXPCHetQZ38LzHFuFqQkyNaHE95sJ4Cnitah5zaxmdru4WM7O6sSZrNvXPgilNlXjIrEzYKgbkHvjgCF5LqokzZmsXxdV40ibwWiGhaeX/iQBxan7sTTXFXR1uqiNllpTbxgF9cLI1w0QRM/ses8kJTgaNUU0JtOw4YDv289cKE1xi2rJCtWurHwdHzUo6kWDwb9xLRaRBkrAvovyuJZmnI0veBSFzXn8UCTUC7x6URWv9msO4KapvDSOo2QQxgQzUxl4bqAo8uvPHxS7nSfzbxCL5Egf7dc/XUEHWQ==","*${response} = &lt;Response [404]&gt;","*Response Text={}","*404, ${response}","*${response.text}, {}"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:02","fail":0,"label":"All Tests","pass":2,"skip":0}],[],[{"elapsed":"00:00:03","fail":0,"id":"s1","label":"Api Test","name":"Api Test","pass":2,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:01","fail":0,"label":"All Tests","pass":2,"skip":0}],[],[{"elapsed":"00:00:02","fail":0,"id":"s1","label":"Api Test","name":"Api Test","pass":2,"skip":0}]];
 </script>
 <script type="text/javascript">
 window.output["errors"] = [];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1754152106495;
+window.output["baseMillis"] = 1754247496730;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 2775;
+window.output["generated"] = 1730;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
@@ -2102,7 +1831,7 @@ window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.h
 </script>
 <title></title>
 </head>
-<body data-theme="dark">
+<body>
 <div id="javascript-disabled">
   <h1>Opening Robot Framework log failed</h1>
   <ul>
@@ -2112,13 +1841,12 @@ window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.h
   </ul>
 </div>
 <script type="text/javascript">removeJavaScriptDisabledWarning();</script>
+
 <div id="header"></div>
 <div id="statistics-container"></div>
 
 <script type="text/javascript">
 $(document).ready(function() {
-    storage.init();
-    theme.init(storage);
     try {
         var topsuite = window.testdata.suite();
     } catch (error) {
@@ -2126,7 +1854,6 @@ $(document).ready(function() {
         return;
     }
     initLayout(topsuite.name, 'Log');
-    theme.reflectPreference();
     addStatistics();
     addErrors();
     addExecutionLog(topsuite);
@@ -2167,6 +1894,25 @@ function drawErrorsRecursively(errors, target) {
         // Errors may have moved scroll position. Resetting location re-scrolls.
         if (window.location.hash)
             window.location.replace(window.location.hash);
+        highlightLinkTarget();
+    }
+}
+
+function highlightLinkTarget() {
+    if (window.location.hash) {
+        var target = $(window.location.hash);
+        highlight(target);
+    }
+}
+
+function highlight(element, color) {
+    if (color === undefined)
+        color = 242;
+    if (color < 255) {
+        element.css({'background-color': 'rgb('+color+','+color+','+color+')'});
+        setTimeout(function () { highlight(element, color+1); }, 300);
+    } else {
+        element.css({'background-color': ''});
     }
 }
 
@@ -2182,8 +1928,9 @@ function makeElementVisible(id) {
         util.map(ids, expandElementWithId);
         if (ids.length) {
             expandFailed(window.testdata.findLoaded(util.last(ids)));
+            window.location.hash = '';
             window.location.hash = id;
-            document.getElementById(id).scrollIntoView();
+            highlightLinkTarget();
         }
     });
 }
@@ -2207,7 +1954,7 @@ function addExecutionLog(main) {
 
 <script type="text/x-jquery-tmpl" id="tagStatisticsRowTemplate">
   <tr class="row-${$item.index}">
-    <td class="stats-col-name" title="${doc}">
+    <td class="stats-col-name" title="{{html doc}}">
       <div class="stat-name">
         <span>{{html label}}</span>
         {{if info}}(${info}){{/if}}
@@ -2381,9 +2128,8 @@ function addExecutionLog(main) {
       <div class="element-header-left" title="${type}  {{if name}}{{html fullName}}  {{/if}}[${status}]">
         <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
         <span class="label ${status.toLowerCase()}">${type}</span>
-        <span class="assign">{{html assign}}</span>
+        <span>{{html assign}}</span>
         <span class="name"><span class="parent-name">{{html libname}}{{if libname}} . {{/if}}</span>{{html name}}</span>
-        &nbsp;
         <span class="arg">{{html arguments}}</span>
       </div>
       <div class="element-header-right" onclick="stopPropagation(event)">
@@ -2417,12 +2163,6 @@ function addExecutionLog(main) {
           <th>Start / End / Elapsed:</th>
           <td>${times.startTime} / ${times.endTime} / ${times.elapsedTime}</td>
         </tr>
-        {{if message()}}
-        <tr>
-          <th>Message:</th>
-          <td class="message">{{html message()}}</td>
-        </tr>
-        {{/if}}
       </table>
     </div>
   </div>
@@ -2445,7 +2185,6 @@ function addExecutionLog(main) {
   <div id="log-level-selector">
   Log level:
     <select onchange="logLevelSelected(this.options[selectedIndex].value)">
-      <option value="3">WARN</option>
       <option value="2">INFO</option>
       <option value="1">DEBUG</option>
       {{if showTrace()}}<option value="0">TRACE</option>{{/if}}

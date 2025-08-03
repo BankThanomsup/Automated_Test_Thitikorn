@@ -1,6 +1,6 @@
 *** Settings ***
 Resource                ..//..//init.txt
-
+Library    OperatingSystem
 
 *** Test Cases ***
 Login Success
@@ -9,7 +9,7 @@ Login Success
     Maximize Browser Window
     SeleniumLibrary.Input Text    id:username    ${VALID_USER}
     SeleniumLibrary.Input Text    id:password    ${VALID_PASS}
-    Click Button    //button[@type="submit"]
+    SeleniumLibrary.Click Button    //button[@type="submit"]
     SeleniumLibrary.Wait Until Page Contains    You logged into a secure area!
     Click Link    Logout
     SeleniumLibrary.Wait Until Page Contains    You logged out of the secure area!
@@ -21,7 +21,7 @@ Login Failed - Password Incorrect
     Maximize Browser Window
     SeleniumLibrary.Input Text    id:username    ${VALID_USER}
     SeleniumLibrary.Input Text    id:password    ${INVALID_PASS}
-    Click Button    //button[@type="submit"]
+    SeleniumLibrary.Click Button    //button[@type="submit"]
     SeleniumLibrary.Wait Until Page Contains    Your password is invalid!
     Close Browser
 
@@ -31,6 +31,8 @@ Login Failed - Username Not Found
     Maximize Browser Window
     SeleniumLibrary.Input Text    id:username    ${INVALID_USER}
     SeleniumLibrary.Input Text    id:password    ${INVALID_PASS}
-    Click Button    //button[@type="submit"]
+    SeleniumLibrary.Click Button    //button[@type="submit"]
     SeleniumLibrary.Wait Until Page Contains    Your username is invalid!
     Close Browser
+
+
