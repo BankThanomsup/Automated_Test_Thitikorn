@@ -1,5 +1,5 @@
 *** Settings ***
-Resource                ..//init.txt
+Resource                ..//..//init.txt
 
 *** Variables ***
 ${BASE_URL}       https://reqres.in/api
