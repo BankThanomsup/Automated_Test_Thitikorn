@@ -2,6 +2,13 @@
 Library           SeleniumLibrary   
 Library           RequestsLibrary
 Library           Collections
+Library           AppiumLibrary
+Library           DateTime
+Library           String
+Library     Resources/Customlibraies/TouchLibrary.py
 
 Resource    Resources/Locators/Locator_Login.robot
 Resource    Resources/Locators/Locator_api_test.robot
+Resource    Resources/Variables/mobile_variables.robot
+Resource    Resources/Keywords/mobile_keywords.robot
+

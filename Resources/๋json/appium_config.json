@@ -1,0 +1,7 @@
+ {   "platformName": "Android",
+    "deviceName": "emulator-5554",
+    "app": "Users/User/Downloads/Automated_Test_Thitikorn/Resources/application/app-minimal.apk",
+    "appPackage": "com.avjindersinghsekhon.minimaltodo",
+    "appActivity": "com.example.avjindersinghsekhon.toodle.MainActivity",
+    "automationName": "UiAutomator2"
+}

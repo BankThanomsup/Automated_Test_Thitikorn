@@ -1,0 +1,7 @@
+ {   "platformName": "Android",
+    "deviceName": "emulator-5554",
+    "app": "Resources/application/app-minimal.apk",
+    "appPackage": "com.avjindersinghsekhon.minimaltodo",
+    "appActivity": "com.example.avjindersinghsekhon.toodle.MainActivity",
+    "automationName": "UiAutomator2"
+}
